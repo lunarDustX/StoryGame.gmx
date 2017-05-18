@@ -32,7 +32,7 @@ with (obj_wolf) {
                 }
                 if (name == "grandma") {
                     if (!wolf_can_visit) {
-                        scr_text("Grandma doesn't open the door.", 0.5);
+                        scr_text("Grandma doesn't open the door.");
                     } else {
                         grandma_alive = false;
                         wolf_in_bed = true;
@@ -47,12 +47,12 @@ with (obj_wolf) {
                             y = gy;
                         }
                         */
-                        scr_text("Wolf eats Grandma, waiting for Red's coming.", 0.5);
+                        scr_text("Wolf eats Grandma, waiting for Red's coming.");
                     }
                     exit;
                 }
                 if (name == "home") {
-                    scr_text("wolf cannot open the door.",0.5);
+                    scr_text("wolf cannot open the door.");
                     exit;
                 }
             }
@@ -63,7 +63,7 @@ with (obj_wolf) {
             } else { // static 
                 with (inst) {
                     instance_destroy();
-                    scr_text("The wolf destroys the " + name + ".", 0.5);
+                    scr_text("The wolf destroys the " + name + ".");
                 }
             }
         }

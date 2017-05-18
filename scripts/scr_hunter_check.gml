@@ -27,7 +27,7 @@ with (obj_hunter) {
         with (inst) {
             if (name == "wolf") {
                 number_of_characters--;
-                scr_text("The wolf is killed.", 0.5);
+                scr_text("The wolf is killed.");
                 instance_destroy();
             }
             
@@ -36,9 +36,9 @@ with (obj_hunter) {
                     wolf_in_bed = false;
                     scr_character_die(obj_wolf);
                     if (!red_alive) {
-                        scr_text("Hunter saves Red and Grandma, happy ending.#GAME OVER.", 0.5);
+                        scr_text("Hunter saves Red and Grandma, happy ending.#GAME OVER.");
                     } else {
-                        scr_text("Hunter kills Wolf, but it's too late. Grandma can't come back.", 0.5);
+                        scr_text("Hunter kills Wolf, but it's too late. Grandma can't come back.");
                         hunter_in_bed = true; // wait
                         with (obj_hunter) {
                             x = gx;
@@ -47,7 +47,7 @@ with (obj_hunter) {
                     }
                 } else {
                     if (red_alive && grandma_alive) {
-                        scr_text("Hunter visits Grandma.", 0.5);
+                        scr_text("Hunter visits Grandma.");
                     } else {
                     
                     }   

@@ -102,13 +102,16 @@ draw_rectangle(x, y, x+width, y+height,0);
 draw_set_colour(c_orange);
 draw_rectangle(x, y, x+width, y+height,1);
 
-// if 
+// if story is over or not
 if (current_position &lt; string_length(story_text)) {
     // update last_space
     if (string_char_at(story_text, current_position) == " ") {
         last_space = current_position;
     }
     current_position ++;
+} else if (story_time){
+    story_time = false;
+    moving_dir = NODIR;
 }
 
 // grab the str

@@ -43,6 +43,10 @@ red_knows = false;
 hunter_alive = true;
 wolf_alive = true;
 
+// game pause
+globalvar story_time;
+story_time = false;
+
 
 </string>
           </argument>
@@ -68,8 +72,12 @@ wolf_alive = true;
             <kind>1</kind>
             <string>// game restart
 if (keyboard_check_pressed(ord("R"))) game_restart();
+// storyTime
+if (story_time) { 
+    exit;
+}
 
-// 
+// check if all the characters are stable
 if (moving_dir == NODIR) {
     scr_check_input();
 } else {
@@ -92,12 +100,18 @@ if (moving_dir == NODIR) {
         }
     }
 
+    // all the characters are STABLE
     if (count == number_of_characters) {
-        // the wolf has a high priority 
+        // storyTime is on
+        story_time = true;
+        storyboard = "";
+        // write story
         scr_wolf_check();
         scr_hunter_check();
         scr_red_check();
-        moving_dir = NODIR;
+        
+        scr_show_story();
+        //moving_dir = NODIR;
     }
 }
 </string>

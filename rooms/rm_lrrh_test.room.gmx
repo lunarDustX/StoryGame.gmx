@@ -10,7 +10,7 @@
   <persistent>0</persistent>
   <colour>12632256</colour>
   <showcolour>-1</showcolour>
-  <code>scr_text("This is the story of Little Red Riding Hood. Now the story begins.", 0.5);</code>
+  <code>scr_text("This is the story of Little Red Riding Hood. Now the story begins.");</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
