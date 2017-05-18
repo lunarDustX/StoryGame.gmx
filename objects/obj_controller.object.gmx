@@ -104,6 +104,7 @@ if (moving_dir == NODIR) {
     if (count == number_of_characters) {
         // storyTime is on
         story_time = true;
+        moving_dir = NODIR;
         storyboard = "";
         // write story
         scr_wolf_check();
@@ -111,7 +112,6 @@ if (moving_dir == NODIR) {
         scr_red_check();
         
         scr_show_story();
-        //moving_dir = NODIR;
     }
 }
 </string>

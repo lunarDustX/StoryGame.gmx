@@ -58,11 +58,11 @@ scr_show_story();</code>
     <instance objName="obj_wolf" x="128" y="64" name="inst_01C18EA2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_hunter" x="448" y="192" name="inst_56B87AF6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_house" x="64" y="192" name="inst_686B1F9D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_tree" x="384" y="128" name="inst_131E0CC0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_tree" x="320" y="256" name="inst_78456721" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_tree" x="384" y="256" name="inst_131E0CC0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_tree" x="320" y="64" name="inst_78456721" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_flower" x="192" y="128" name="inst_C917BF6C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_stone" x="192" y="64" name="inst_B7216AB6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_stone" x="256" y="256" name="inst_74CFF861" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_stone" x="64" y="64" name="inst_B7216AB6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_stone" x="320" y="256" name="inst_74CFF861" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_home" x="448" y="64" name="inst_65EB6427" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_tree" x="64" y="256" name="inst_F47D4064" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_flower" x="128" y="256" name="inst_A4B314F1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

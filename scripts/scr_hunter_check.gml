@@ -8,19 +8,19 @@ with (obj_house) {
 with (obj_hunter) {
     //if (stable) {
         inst = noone;
-        if (moving_dir == LEFT) {
+        if (pre_dir == LEFT) {
             inst = instance_place(x-30,y,obj_all);
         }
     
-        if (moving_dir == RIGHT) {
+        if (pre_dir == RIGHT) {
             inst = instance_place(x+30,y,obj_all);
         }
     
-        if (moving_dir == UP) {
+        if (pre_dir == UP) {
             inst = instance_place(x,y-30,obj_all);
         }
     
-        if (moving_dir == DOWN) {
+        if (pre_dir == DOWN) {
             var inst = instance_place(x,y+30,obj_all);
         }
         

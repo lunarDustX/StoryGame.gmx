@@ -1,6 +1,5 @@
 /// scr_check_input
 
-//if (!moving) {
     if (keyboard_check(vk_left)) {
          //moving = true;
          moving_dir = LEFT;
@@ -20,4 +19,5 @@
          //moving = true;
          moving_dir = DOWN;
     }
-//}
+    
+    pre_dir = moving_dir;

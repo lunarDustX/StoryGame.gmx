@@ -7,19 +7,19 @@ with (obj_house) {
 
 with (obj_wolf) {
         inst = noone;
-        if (moving_dir == LEFT) {
+        if (pre_dir == LEFT) {
             inst = instance_place(x-30,y,obj_all);
         }
     
-        if (moving_dir == RIGHT) {
+        if (pre_dir == RIGHT) {
             inst = instance_place(x+30,y,obj_all);
         }
     
-        if (moving_dir == UP) {
+        if (pre_dir == UP) {
             inst = instance_place(x,y-30,obj_all);
         }
     
-        if (moving_dir == DOWN) {
+        if (pre_dir == DOWN) {
             var inst = instance_place(x,y+30,obj_all);
         }
         
@@ -60,11 +60,22 @@ with (obj_wolf) {
             // destroy or kill
             if (object_is_ancestor(inst.object_index, obj_moving)) {
                 scr_character_die(inst);
+                with (inst) {
+                    scr_text("Wolf kills " + name + ".");
+                    var xx = x;
+                    var yy = y;
+                }
+                x = xx;
+                y = yy;
             } else { // static 
                 with (inst) {
                     instance_destroy();
-                    scr_text("The wolf destroys the " + name + ".");
+                    scr_text("Wolf destroys " + name + ".");
+                    var xx = x;
+                    var yy = y;
                 }
+                x = xx;
+                y = yy;
             }
         }
 }

@@ -111,7 +111,6 @@ if (current_position &lt; string_length(story_text)) {
     current_position ++;
 } else if (story_time){
     story_time = false;
-    moving_dir = NODIR;
 }
 
 // grab the str

@@ -50,7 +50,8 @@ stable = true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>off = false;
+            <string>/// activate the object
+off = false;
 </string>
           </argument>
         </arguments>
@@ -73,7 +74,7 @@ stable = true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// inactive character
+            <string>/// moving
     if (off) exit;
 
     if (moving_dir == LEFT) {
@@ -143,8 +144,7 @@ stable = true;
           <argument>
             <kind>1</kind>
             <string>draw_self();
-//draw_text(x,y,y);
-//draw_text(x,y,stable);
+draw_text(x,y,story_time);
 </string>
           </argument>
         </arguments>
