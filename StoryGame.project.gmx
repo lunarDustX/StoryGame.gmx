@@ -27,6 +27,7 @@
     <script>scripts\scr_red_check.gml</script>
     <script>scripts\scr_text.gml</script>
     <script>scripts\scr_worldgen.gml</script>
+    <script>scripts\scr_character_die.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt</font>

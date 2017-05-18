@@ -1,4 +1,10 @@
-///scr_wolf_kill
+///scr_hunter_check
+with (obj_house) {
+    if (hunter_in_bed) {
+        exit;
+    }
+}
+
 with (obj_hunter) {
     //if (stable) {
         inst = noone;
@@ -18,7 +24,6 @@ with (obj_hunter) {
             var inst = instance_place(x,y+30,obj_all);
         }
         
-        // kill the wolf
         with (inst) {
             if (name == "wolf") {
                 number_of_characters--;
@@ -27,10 +32,25 @@ with (obj_hunter) {
             }
             
             if (name == "grandma") {
-                if (instance_exists(obj_red)) {
-                    scr_text("hunter visits grandma.", 0.5);
+                if (wolf_in_bed) {
+                    wolf_in_bed = false;
+                    scr_character_die(obj_wolf);
+                    if (!red_alive) {
+                        scr_text("Hunter saves Red and Grandma, happy ending.#GAME OVER.", 0.5);
+                    } else {
+                        scr_text("Hunter kills Wolf, but it's too late. Grandma can't come back.", 0.5);
+                        hunter_in_bed = true; // wait
+                        with (obj_hunter) {
+                            x = gx;
+                            y = gy;
+                        }
+                    }
                 } else {
-                    scr_text("hunter tells grandma the death of red.", 0.5);
+                    if (red_alive && grandma_alive) {
+                        scr_text("Hunter visits Grandma.", 0.5);
+                    } else {
+                    
+                    }   
                 }
             }
         }

@@ -1,6 +1,11 @@
 ///scr_wolf_kill
+with (obj_house) {
+    if (wolf_in_bed) {
+        exit;
+    }
+}
+
 with (obj_wolf) {
-    //if (stable) {
         inst = noone;
         if (moving_dir == LEFT) {
             inst = instance_place(x-30,y,obj_all);
@@ -28,8 +33,23 @@ with (obj_wolf) {
                 if (name == "grandma") {
                     if (!wolf_can_visit) {
                         scr_text("Grandma doesn't open the door.", 0.5);
-                        exit;
+                    } else {
+                        grandma_alive = false;
+                        wolf_in_bed = true;
+                        image_index = 1;
+                        depth = -1;
+                        scr_character_die(obj_wolf);
+                        /*
+                        with (obj_wolf) {
+                            stable = true;
+                            off = true;
+                            x = gx;
+                            y = gy;
+                        }
+                        */
+                        scr_text("Wolf eats Grandma, waiting for Red's coming.", 0.5);
                     }
+                    exit;
                 }
                 if (name == "home") {
                     scr_text("wolf cannot open the door.",0.5);
@@ -39,18 +59,12 @@ with (obj_wolf) {
             
             // destroy or kill
             if (object_is_ancestor(inst.object_index, obj_moving)) {
-                number_of_characters--;
-                with (inst) {
-                    scr_text("The wolf kills the " + name + ".", 0.5);
-                }
+                scr_character_die(inst);
             } else { // static 
                 with (inst) {
+                    instance_destroy();
                     scr_text("The wolf destroys the " + name + ".", 0.5);
                 }
-            }
-            
-            with (inst) {
-                instance_destroy();
             }
         }
 }

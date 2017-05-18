@@ -27,7 +27,13 @@
             <kind>1</kind>
             <string>event_inherited();
 wolf_can_visit = true;
+wolf_in_bed = false;
+hunter_in_bed = false;
+
 name = "grandma";
+
+// no animating
+image_speed = 0;
 </string>
           </argument>
         </arguments>

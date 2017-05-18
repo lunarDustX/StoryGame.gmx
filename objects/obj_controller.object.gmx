@@ -35,11 +35,15 @@ count = number_of_characters;
 // generate the map
 scr_worldgen();
 
-/// charaters state
-globalvar red_alive, hunter_alive, wolf_alive;
+// charaters state
+globalvar red_alive, hunter_alive, wolf_alive, grandma_alive, red_knows;
+grandma_alive = true;
 red_alive = true;
+red_knows = false;
 hunter_alive = true;
 wolf_alive = true;
+
+
 </string>
           </argument>
         </arguments>

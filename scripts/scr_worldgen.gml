@@ -8,3 +8,10 @@ border_left = 64;
 border_right = border_left + col*tile_size;
 border_top = 64;
 border_bottom = border_top + row*tile_size;
+
+// get Grandma's position
+globalvar gx, gy;
+with (obj_house) {
+    gx = x;
+    gy = y;
+}
